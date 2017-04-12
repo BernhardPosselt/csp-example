@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSP test</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <script src="/static/index.js?fingerprint=asdfasdfasdfasdf"></script>
+        <script nonce="123" integrity="sha256:aljsdflkajsdfklajsdflkajsfldkj">
+            console.log('hi from your header');
+        </script>
+        <style>
+            a {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="/static/awesome_tiger.svg" id="img" alt="test" width="200" style="border: 5px solid red;">
+
+
+        <a href="javascript:alert('href')" ref="noreferrer noopener">click me href</a>
+
+        <a href="#" onclick="alert('onclick')">click me onclick</a>
+
+        <script>alert('hi from your content')</script>
+    </body>
+</html>
